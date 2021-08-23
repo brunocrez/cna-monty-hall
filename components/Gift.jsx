@@ -5,8 +5,8 @@ export default function Gift() {
     <div className={styles.gift}>
       <div className={styles.cover}></div>
       <div className={styles.box}></div>
-      <div className={styles.first_tie}></div>
-      <div className={styles.second_tie}></div>
+      <div className={styles.firstTie}></div>
+      <div className={styles.secondTie}></div>
     </div>
   );
 }
