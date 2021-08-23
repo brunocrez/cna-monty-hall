@@ -16,3 +16,10 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --door-width: 200px;
+  --door-height: 310px;
+  --door-border-color: #A52A2A;
+  --door-selected-color: #BDBD04;
+}

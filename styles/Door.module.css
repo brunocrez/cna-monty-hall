@@ -1,0 +1,66 @@
+.area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: var(--door-width);
+  height: var(--door-height);
+  margin: 5px;
+}
+
+.door {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  
+  padding: 15px;
+  background-color: #D2691E;
+}
+
+.frame {
+  display: flex;
+  flex: 1;
+
+  width: 90%;
+
+  border-left: 5px solid var(--door-border-color);
+  border-top: 5px solid var(--door-border-color);
+  border-right: 5px solid var(--door-border-color);
+}
+
+.number {
+  font-size: 3rem;
+}
+
+.doorKnob {
+  position: absolute;
+  top: calc(0.45 * var(--door-height));
+  
+  align-self: flex-start;
+
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background-color: var(--door-border-color);
+}
+
+.ground {
+  height: 10px;
+  width: 100%;
+  background-color: #DDD;
+}
+
+.selected {
+  border-left: 5px solid var(--door-selected-color);
+  border-top: 5px solid var(--door-selected-color);
+  border-right: 5px solid var(--door-selected-color);
+}
+
+.selected .number {
+  color: var(--door-selected-color);
+}
+
+.selected .doorKnob {
+  background-color: var(--door-selected-color);
+}
