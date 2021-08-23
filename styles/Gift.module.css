@@ -1,0 +1,36 @@
+.gift {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cover {
+  width: 100px;
+  height: 25px;
+  background-color: #7AA944;
+}
+
+.box {
+  width: 90px;
+  height: 60px;
+  background-color: #5c7e32;
+}
+
+.first_tie {
+  position: absolute;
+
+  background-color: #FF0000;
+  width: 15px;
+  height: 85px;
+}
+
+.second_tie {
+  position: absolute;
+  
+  top: 40px;
+  background-color: #FF0000;
+  width: 90px;
+  height: 15px;
+}
