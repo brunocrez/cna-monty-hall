@@ -45,6 +45,10 @@
   background-color: var(--door-border-color);
 }
 
+.doorKnob:hover {
+  cursor: pointer;
+}
+
 .ground {
   height: 10px;
   width: 100%;
