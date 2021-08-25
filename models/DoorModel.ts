@@ -1,8 +1,8 @@
-export default class Door {
-  #number;
-  #isOpen;
-  #hasGift;
-  #isSelected;
+export default class DoorModel {
+  #number: number;
+  #isOpen: boolean;
+  #hasGift: boolean;
+  #isSelected: boolean;
 
   constructor(number, isOpen = false, hasGift = false, isSelected = false) {
     this.#number = number;
@@ -29,16 +29,16 @@ export default class Door {
 
   toggleSelection() {
     const isSelected = !this.isSelected;
-    return new Door(this.number, this.isOpen, this.hasGift, isSelected);
+    return new DoorModel(this.number, this.isOpen, this.hasGift, isSelected);
   }
 
   open() {
     const isOpen = true;
-    return new Door(this.number, isOpen, this.hasGift, this.isSelected);
+    return new DoorModel(this.number, isOpen, this.hasGift, this.isSelected);
   }
 
   unselect() {
     const isSelected = false;
-    return new Door(this.number, isOpen, this.hasGift, isSelected);
+    return new DoorModel(this.number, this.isOpen, this.hasGift, isSelected);
   }
 }
