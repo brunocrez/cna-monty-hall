@@ -14,6 +14,17 @@ export default function Game() {
   const router = useRouter();
 
   const [doors, setDoors] = useState([]);
+  const [isValidParam, setIsValidParam] = useState(false);
+
+  useEffect(() => {
+    const doors = Number(router.query.doors);
+    const hasGift = Number(router.query.hasGift);
+
+    const isValidDoors = doors >= 3 && doors <= 50;
+    const isValidGift = hasGift >= 1 && hasGift <= doors;
+
+    setIsValidParam(isValidDoors && isValidGift);
+  }, [doors]);
 
   useEffect(() => {
     const doors = Number(router.query.doors);
@@ -30,7 +41,7 @@ export default function Game() {
   return (
     <div className={styles.game}>
       <div className={styles.doors}>
-        {renderDoors()}
+        { isValidParam ? renderDoors() : <h1>Please, check your values again!</h1> }
       </div>
       <div className={styles.buttons}>
         <Link href="/">
